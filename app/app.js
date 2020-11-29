@@ -1,5 +1,5 @@
 const openSource = {
-    githubConvertedToken: "2f38608b5eb927f066c9ee6afb361691dd1680e5",
+    githubConvertedToken: "2634aa6be271bf7b6c88bdd2c842d5853efe60d2",
     githubUserName: "inspirion33",
 };
 
@@ -64,7 +64,8 @@ fetch(baseUrl, {
     body: JSON.stringify(query_pr),
   })
     .then((response) => response.json() )
-    .then((data) => { 
+    .then((data) => {
+        console.log(data); 
 
         function timeDifference(current, previous) {
     
