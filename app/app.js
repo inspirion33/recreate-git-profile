@@ -1,5 +1,5 @@
 const openSource = {
-    githubConvertedToken: "5964a8e0530ecf427df2d2e20e817eeda850f31e",
+    githubConvertedToken: "2f38608b5eb927f066c9ee6afb361691dd1680e5",
     githubUserName: "inspirion33",
 };
 
@@ -64,7 +64,7 @@ fetch(baseUrl, {
     body: JSON.stringify(query_pr),
   })
     .then((response) => response.json() )
-    .then((data) => {
+    .then((data) => { 
 
         function timeDifference(current, previous) {
     
@@ -107,8 +107,6 @@ fetch(baseUrl, {
         let time = today.getHours() + ", " + today.getMinutes() + ", " + today.getSeconds();
         let dateTime = date+' '+time;
         current = today;
-        
-        // var lastUpdate = new Date("2020-11-09T14:29:12Z");
         
         // TEST DATA - IRRELEVANT
         detail = data;
@@ -202,3 +200,15 @@ fetch(baseUrl, {
         listRepositories.innerHTML = repoList;
     } )
     .catch(err => console.log(err))
+
+
+// fetch(baseUrl, {
+//     method: "POST",
+//     headers: headers,
+//     body: JSON.stringify(query_pr),
+//     })
+//     .then((response) => response.json() )
+//     .then((data) => {
+//         console.log(data);
+//         return data;
+//     } ).catch(err => console.log(err));

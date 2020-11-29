@@ -550,7 +550,7 @@ footer .space {
     margin-top: 24px;
 }
 
-h3.repo-name:hover {
+h3.repo-name a:hover {
     text-decoration: underline;
 }
 
