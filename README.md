@@ -21,10 +21,7 @@ Everything is set and nothing much to change.
 <br><br>
 * Head over to ./app/app.js and update the token and username variable to yours.
 <br><br>
-const openSource = {
-<br>
-    githubConvertedToken: "YOUR ACCESS TOKEN HERE",
-<br>
-    githubUserName: "YOUR USER NAME HERE",
-<br>
+const openSource = {<br>
+    githubConvertedToken: "YOUR ACCESS TOKEN HERE",<br>
+    githubUserName: "YOUR USER NAME HERE",<br>
 };

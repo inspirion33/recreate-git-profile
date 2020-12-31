@@ -1,0 +1,50 @@
+function timeDifference(current, previous) {
+    
+    var msPerMinute = 60 * 1000;
+    var msPerHour = msPerMinute * 60;
+    var msPerDay = msPerHour * 24;
+    var msPerMonth = msPerDay * 30;
+    var msPerYear = msPerDay * 365;
+    
+    var elapsed = current - previous;
+    
+    if (elapsed < msPerMinute) {
+         return Math.round(elapsed/1000) + ' seconds ago';   
+    }
+    
+    else if (elapsed < msPerHour) {
+         return Math.round(elapsed/msPerMinute) + ' minutes ago';   
+    }
+    
+    else if (elapsed < msPerDay ) {
+         return Math.round(elapsed/msPerHour ) + ' hours ago';   
+    }
+
+    else if (elapsed < msPerMonth) {
+         return 'approximately ' + Math.round(elapsed/msPerDay) + ' days ago';   
+    }
+    
+    else if (elapsed < msPerYear) {
+         return 'approximately ' + Math.round(elapsed/msPerMonth) + ' months ago';   
+    }
+    
+    else {
+         return 'approximately ' + Math.round(elapsed/msPerYear ) + ' years ago';   
+    }
+}
+
+
+// TESTS
+var current;
+
+var today = new Date();
+console.log('currentDate', today);
+var date = today.getFullYear()+', '+(today.getMonth()+1)+', '+today.getDate();
+var time = today.getHours() + ", " + today.getMinutes() + ", " + today.getSeconds();
+var dateTime = date+' '+time;
+current = today;
+
+var lastUpdate = new Date("2020-11-09T14:29:12Z");
+
+
+console.log(timeDifference(current, new Date(lastUpdate)));
